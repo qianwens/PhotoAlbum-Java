@@ -15,10 +15,13 @@
 - **Resource ID**: _To be provisioned_
 - **Deployment Script**: _To be defined_
 
-## Code Reference Samples
+## Code Samples
 
-- **PostgreSQL Connection**: `./postgresql/create_connection.md`
-- **Logging Configuration**: `./logging/logging.md` _(Third-party SDK integration)_
+- **configuration**: `./examples/pom.xml`
+- **PostgreSQL Connection**: `./examples/postgresql/create_connection.java`
+- **Logging Configuration**: `./examples/logging.java` _(Third-party SDK integration)_
+- **docker**: `./examples/docker.md`
+- **deploy**: `./examples/docker.md`
 
 ## Build Configuration
 
