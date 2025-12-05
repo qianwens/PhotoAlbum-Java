@@ -47,21 +47,17 @@ Given that modernization description, do this:
    - You will be given a list of migration issues with related with current project, you need to double check if the issue really exist in current project. If not, please ignore this issue when you generate the plan 
 
 5. Create a modernization plan
-    1) Read the file ".appmod-kit/templates/plan-template.md" from the project path to get a plan template for generating a modernization plan.
+    1) Read the file ".appmod-kit/templates/customized-plan-template.md" from the project path to get a plan template for generating a modernization plan.
     2) Save it in the plan folder created by `.appmod-kit/scripts/powershell/create-plan.ps1 -Json` with the filename plan.md. If a plan already exists, overwrite it.
-    3) Read the solution information using MCP tool **appmod-list-all-solutions** to access the knowledge base and learn about the mapping of issue rule IDs to solution IDs in order to solve issues.
-    4) **appmod-list-all-solutions NOT FOUND** Stop to create plan if MCP tool **appmod-list-all-solutions** is not found and ask user to install the MCP server for migration
-    
-    4) If user only want to upgrade or deploy the application without migration, skip step 3).
 
 ## Build Modernization Plan Steps
 
 1. **Load context**: Retrieve the files or github issues user mentioned in the input.
     1) Get the project information from input file/github issues, respect the project information from input file/github issue, if provided, no need to scan codebase.
-    2) Get the knowledge base for modernization
+    2) Get the knowledge base for modernization from file ".github/modernization/agent.md"
     3) Collect the plan generation rules from input
 
-2. **Generate plan**: Generate plan.md using plan-template.md, you will read
+2. **Generate plan**: Generate plan.md using customized-plan-template.md, you will read
     1) follow the structure of the plan-template.md
     2) follow the rules defined in the template to fill in the sections with relevant information based on the analysis of user input and content of mentioned files
 
@@ -78,6 +74,6 @@ Given that modernization description, do this:
 ## Completion Criteria
 
 1. All the open issues are clarified and the plan is updated
-2. The modernization task list is built
-3. The modernization task list MUST be scoped according to user input
+2. The modernization phases is built
+3. The modernization phases MUST be scoped according to user input
 4. DON'T RUN the plan if user does not explicitly ask you to run the plan
