@@ -84,14 +84,7 @@ graph TB
 
 ## Code Migration
 
-Break down the migration into features with this granularity:
-- One feature per complete service migration (configuration + implementation)
-- Each feature can be evaluated with integration tests
-- No modifications to unimpacted code or existing functionality
-- No tests for unimpacted code
-- Steps describe brief changes, unit test goals, and integration test goals without specific file names
-
-### Feature: Photo Read Service Migration to Azure PostgreSQL
+### Modernize Feature: Photo Read Service Migration to Azure PostgreSQL
 
 **Description**: Configure Azure PostgreSQL infrastructure and migrate all photo read operations (gallery, detail, BLOB serving, navigation) from Oracle to Azure PostgreSQL.
 
