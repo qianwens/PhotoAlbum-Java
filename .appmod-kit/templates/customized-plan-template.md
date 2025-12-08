@@ -93,10 +93,10 @@ graph TB
 **Purpose**: Break down migration work into testable features without modifying unimpacted code.
 
 **Breakdown Rules**:
-- One feature per complete service migration (configuration + implementation)
+- Create features ONLY based on what the user explicitly requested - do not infer or add implicit features
+- One feature per user-requested capability (configuration + implementation)
 - Each feature can be evaluated with integration tests
-- No modifications to unimpacted code or existing functionality
-- No tests for unimpacted code
+- Do not add tests for unimpacted code or existing functionality unless user requested
 - Steps describe brief changes, unit test goals, and integration test goals without specific file names
 
 **Template**:

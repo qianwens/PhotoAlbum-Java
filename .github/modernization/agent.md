@@ -14,3 +14,5 @@
 ### Container App
 - **Resource ID**: _To be provisioned_
 - **Deployment Script**: _To be defined_
+
+## Feature Breakdown Rules
