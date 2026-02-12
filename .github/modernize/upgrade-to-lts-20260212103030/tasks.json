@@ -23,7 +23,16 @@
         "passIntegrationTests": "false",
         "securityComplianceCheck": "false"
       },
-      "status": "pending"
+      "status": "success",
+      "taskSummary": "Successfully upgraded Java from 1.8 to 21 and Spring Boot from 2.7.18 to 3.4.2. All builds and tests passed. Package migration from javax.* to jakarta.* completed. One HIGH severity CVE identified in commons-io:2.11.0 (CVE-2024-47554) - recommend upgrading to 2.18.0.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "true",
+        "generateNewIntegrationTests": "true",
+        "passUnitTests": "true",
+        "passIntegrationTests": "true",
+        "securityComplianceCheck": null
+      }
     }
   ],
   "metadata": {
