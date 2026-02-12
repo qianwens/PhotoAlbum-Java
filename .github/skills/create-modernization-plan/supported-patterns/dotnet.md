@@ -1,0 +1,27 @@
+
+### Supported Task Patterns with Skill Definitions
+These patterns have pre-defined skills to assist in their execution. When they are selected in a modernization plan, the corresponding skills should be used.
+Each of the item is written in the following format: `- **skill-name**: skill-description`.
+
+- **migration-azure-communication-email**: Migrate email sending to Azure Communication Services Email with Managed Identity. Use when migrating from SMTP, SendGrid, custom email services, or legacy email configurations using connection strings to Azure Communication Services with DefaultAzureCredential.
+- **migration-azure-confluent-kafka**: Migrate Kafka to Confluent Cloud on Azure with Managed Identity. Use when migrating .NET applications using Confluent.Kafka from local Kafka to Confluent Cloud on Azure, using Azure Managed Identity and DefaultAzureCredential.
+- **migration-azure-database-postgresql**: Migrate database connections to Azure Database for PostgreSQL with Managed Identity. Use when migrating from PostgreSQL with username/password, Npgsql client, Entity Framework Core with PostgreSQL, Oracle database migration, or local PostgreSQL to Azure PostgreSQL with password-less authentication.
+- **migration-azure-eventhubs-kafka**: Migrate Kafka to Azure Event Hubs for Kafka with Managed Identity. Use when migrating .NET applications using Confluent.Kafka from local Kafka to Azure Event Hubs for Kafka, using Azure Managed Identity and DefaultAzureCredential.
+- **migration-azure-keyvault-certificate**: Migrate certificates to Azure Key Vault Certificate management with Managed Identity. Use when managing SSL/TLS certificates, code signing certificates, X.509 certificates stored locally or in file systems, with DefaultAzureCredential authentication.
+- **migration-azure-keyvault-secret**: Migrate secrets to Azure Key Vault. Use when migrating hard-coded credentials, connection strings, API keys, secrets in configuration files (appsettings.json, Web.config), secrets in environment variables, or secrets from third-party managers (AWS Secrets Manager, HashiCorp Vault) to Azure Key Vault with DefaultAzureCredential.
+- **migration-azure-redis-cache**: Migrate caching to Azure Cache for Redis with Managed Identity. Use when migrating in-memory cache, MemoryCache, System.Runtime.Caching, Redis with password auth, StackExchange.Redis, ServiceStack.Redis, or local Redis to Azure Cache for Redis with DefaultAzureCredential authentication.
+- **migration-azure-servicebus**: Migrate message queues to Azure Service Bus with Managed Identity. Use when migrating from RabbitMQ, MSMQ, or other message brokers to Azure Service Bus with DefaultAzureCredential authentication. Covers queues, topics, subscriptions, and message processing.
+- **migration-azure-sql-database**: Migrate database connections to Azure SQL Database or Azure SQL Managed Instance with Managed Identity. Use when migrating from SQL Server with username/password, System.Data.SqlClient, Entity Framework 6, or local SQL Server to Azure SQL with DefaultAzureCredential authentication.
+- **migration-azure-storage-blob**: Migrate file storage to Azure Storage Blob with Managed Identity. Use when migrating from AWS S3, local file system, or existing blob storage with connection strings/account keys to Azure Storage Blob with DefaultAzureCredential authentication.
+- **migration-azure-storage-mount**: Migrate local file I/O to Azure Storage mount paths. Use when migrating from hard-coded local file paths (Windows C:\, Linux /home/) to Azure mounted storage paths while maintaining the same file operations functionality.
+- **migration-console-logging**: Migrate file-based logging to console logging for cloud applications. Use when migrating from log4net, NLog, Serilog with file appenders, or any file-based logging to stdout/stderr console logging for Azure App Service, Azure Container Apps, or Kubernetes deployments.
+- **migration-dependency-management**: Guide for .NET dependency management covering both modern SDK-style (.NET Core, .NET 5+) and legacy .NET Framework projects. Use when working with package references, project file structures, packages.config, or migrating between project formats.
+- **migration-managed-identity**: Migrate .NET applications to use Azure Managed Identity for authentication. Use when migrating from connection strings, client secrets, certificates, or credential-based auth to DefaultAzureCredential for Azure SQL, Storage, Key Vault, Service Bus, Event Hubs, Cosmos DB, and other Azure services.
+- **migration-microsoft-entra-id**: Migrate .NET app authentication to Microsoft Entra ID (formerly Azure AD). Use when migrating from forms authentication, custom authentication, LDAP, Windows authentication, or implementing OAuth/OIDC for ASP.NET Core, ASP.NET Web Forms, and Microsoft Graph integration.
+- **migration-opentelemetry-azure**: Migrate logging and observability to OpenTelemetry on Azure. Use when migrating from Application Insights SDK, System.Diagnostics, log4net, NLog, Serilog, custom telemetry, APM tools (AppDynamics, Dynatrace, New Relic) to OpenTelemetry with Azure Monitor integration.
+
+
+### Supported Task Patterns without Skill Definitions
+These patterns do not have pre-defined skills. When they are selected in a modernization plan, prepare a prompt based on the description to guide the AI in performing the required tasks.
+
+
