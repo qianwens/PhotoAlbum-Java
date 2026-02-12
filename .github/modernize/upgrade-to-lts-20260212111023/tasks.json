@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Tasks template for upgrade to latest LTS versions",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-java-to-lts",
+      "description": "Upgrade Java to version 21 (LTS)",
+      "requirements": "Upgrade JDK to version 21, update build configuration files (pom.xml or build.gradle), ensure compatibility with Java 21 features and APIs",
+      "dependencies": [],
+      "environmentConfiguration": null,
+      "skills": [
+        {
+          "name": "java-version-upgrade",
+          "location": "builtin"
+        }
+      ],
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "generateNewIntegrationTests": "false",
+        "passUnitTests": "true",
+        "passIntegrationTests": "false",
+        "securityComplianceCheck": "false"
+      },
+      "status": "pending"
+    },
+    {
+      "type": "upgrade",
+      "id": "002-upgrade-spring-boot-to-lts",
+      "description": "Upgrade Spring Boot to version 3.4",
+      "requirements": "Upgrade Spring Boot to 3.4, Spring Framework to 6.x, migrate javax.* packages to jakarta.* namespace if needed, update related dependencies",
+      "dependencies": ["001-upgrade-java-to-lts"],
+      "environmentConfiguration": null,
+      "skills": [
+        {
+          "name": "java-version-upgrade",
+          "location": "builtin"
+        }
+      ],
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "generateNewIntegrationTests": "false",
+        "passUnitTests": "true",
+        "passIntegrationTests": "false",
+        "securityComplianceCheck": "false"
+      },
+      "status": "pending"
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "application",
+    "language": "java",
+    "createdAt": "2026-02-12T11:10:27.504Z",
+    "version": "1.0"
+  }
+}
