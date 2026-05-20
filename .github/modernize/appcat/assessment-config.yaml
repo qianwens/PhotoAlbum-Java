@@ -1,0 +1,69 @@
+# You can edit this file to configure the application assessment. Please note that any changes saved to this file will be applied the next time you run the assessment.
+# The configurable [AppCAT](https://aka.ms/appcat-java) arguments
+# 
+# - target: target Azure compute service to run the apps on. Choosing multiple targets if you haven't decided which one to use and later you can choose and compare on the assessment report.
+#   |----------------------|------------------------------------------------------------------------|
+#   | Target               | Description                                                            |
+#   |----------------------|------------------------------------------------------------------------|
+#   | azure-aks            | Best practices for deploying an app to Azure Kubernetes Service.       |
+#   | azure-appservice     | Best practices for deploying an app to Azure App Service.              |
+#   | azure-container-apps | Best practices for deploying an app to Azure Container Apps.           |
+#   |----------------------|------------------------------------------------------------------------|
+#
+# - capability: target technology to modernize the apps towards.
+#   |----------------------|------------------------------------------------------------------------|
+#   | Capability           | Description                                                            |
+#   |----------------------|------------------------------------------------------------------------|
+#   | containerization     | Best practices for containerizing applications.                        |
+#   | openjdk11            | Best practices for migrating to OpenJDK 11.                            |
+#   | openjdk17            | Best practices for migrating to OpenJDK 17.                            |
+#   | openjdk21            | Best practices for migrating to OpenJDK 21.                            |
+#   |----------------------|------------------------------------------------------------------------|
+#
+# - os: target operating system to run the apps on.
+#   |----------------------|------------------------------------------------------------------------|
+#   | OS name              | Description                                                            |
+#   |----------------------|------------------------------------------------------------------------|
+#   | linux                | Best practices for migrating applications to the Linux platform.       |
+#   | windows              | Best practices for migrating applications to the Windows platform.     |
+#   |----------------------|------------------------------------------------------------------------|
+#
+# - mode: analysis mode.
+#   |-------------|----------------------------------------------------------------------------------------|
+#   | Mode        | Description                                                                            |
+#   |-------------|----------------------------------------------------------------------------------------|
+#   | issue-only  | analyze source code to only detect issues                                              |
+#   | source-only | analyze source code to detect both issues and used technologies                        |
+#   | full        | analyze source code to detect both issues and used technologies, and list dependencies |
+#   |-------------|----------------------------------------------------------------------------------------|
+#
+# Three examples on how to configure properly.
+#
+# Example one: you'd like to migrate your apps to AKS as linux containers and want to understand what are the issues to be fixed:
+# appcat:
+# - target:
+#     - azure-aks
+#   os:
+#     - linux
+#   mode: issue-only
+#
+# Example two: you'd like to migrate your apps to App Service Linux and want to understand what are the issues to be fixed:
+# appcat:
+# - target:
+#     - azure-appservice
+#   os:
+#     - linux
+#   mode: issue-only
+#
+# Example three: you'd like to modernize your apps to JDK21 and want to understand what are the issues to be fixed:
+# appcat:
+# - capability:
+#     - openjdk21
+#   mode: issue-only
+
+appcat:
+  - target:
+      - azure-aks
+      - azure-appservice
+      - azure-container-apps
+    mode: issue-only
